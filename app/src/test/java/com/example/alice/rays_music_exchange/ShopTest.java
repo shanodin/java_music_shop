@@ -61,4 +61,12 @@ public class ShopTest {
         assertEquals(150.00, shop1.getFunds());
         assertEquals(2, shop1.getStockList().size());
     }
+
+    @Test
+    public void testTotalProfit(){
+        shop1.addToStock(product1);
+        shop1.addToStock(product2);
+        shop1.addToStock(guitar);
+        assertEquals(63.00, shop1.getTotalProfit());
+    }
 }

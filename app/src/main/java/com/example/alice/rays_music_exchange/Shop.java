@@ -37,4 +37,12 @@ public class Shop {
         double newFunds = funds + product.profit();
         this.setFunds(newFunds);
     }
+
+    public double getTotalProfit() {
+        double totalProfit = 0;
+        for (Saleable product : stockList ) {
+            totalProfit += product.profit();
+        }
+        return totalProfit;
+    }
 }
